@@ -33,6 +33,16 @@ class FontAweHelper extends Helper
     public const DUO = 'fad';
 
     /**
+     * FontAwesome Brand icon type
+     */
+    public const BRAND = 'fab';
+
+    /**
+     * FontAwesome Thin icon type
+     */
+    public const THIN = 'fat';
+
+    /**
      * Base link for getting a FontAwesome kit. Kit identifier will be added by using sprintf()
      */
     public const KIT_URL = 'https://kit.fontawesome.com/%s.js';
@@ -164,6 +174,60 @@ class FontAweHelper extends Helper
     public function duoLink(string $icon, $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::DUO, $icon, $url, $title, $options);
+    }
+
+    /**
+     * Create a FontAwesome Brand icon with optional title appended
+     *
+     * @param string $icon FontAwesome icon
+     * @param string|null $title Anchor text
+     * @param array $options Attributes to pass to icon element <i />
+     * @return string Finished FontAwesome Brand icon and optional title
+     */
+    public function brand(string $icon, ?string $title = '', array $options = []): string
+    {
+        return $this->icon(self::BRAND, $icon, $title, $options);
+    }
+
+    /**
+     * Create a link with a Brand icon
+     *
+     * @param string $icon FontAwesome icon
+     * @param string|array $url Html url as string or array
+     * @param string|null $title Anchor text included with icon
+     * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
+     * @return string Finished anchor element with FontAwesome Brand icon and title
+     */
+    public function brandLink(string $icon, $url, ?string $title = '', array $options = []): string
+    {
+        return $this->link(self::BRAND, $icon, $url, $title, $options);
+    }
+
+    /**
+     * Create a FontAwesome Thin icon with optional title appended
+     *
+     * @param string $icon FontAwesome icon
+     * @param string|null $title Anchor text
+     * @param array $options Attributes to pass to icon element <i />
+     * @return string Finished FontAwesome Thin icon and optional title
+     */
+    public function thin(string $icon, ?string $title = '', array $options = []): string
+    {
+        return $this->icon(self::THIN, $icon, $title, $options);
+    }
+
+    /**
+     * Create a link with a Thin icon
+     *
+     * @param string $icon FontAwesome icon
+     * @param string|array $url Html url as string or array
+     * @param string|null $title Anchor text included with icon
+     * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
+     * @return string Finished anchor element with FontAwesome Thin icon and title
+     */
+    public function thinLink(string $icon, $url, ?string $title = '', array $options = []): string
+    {
+        return $this->link(self::THIN, $icon, $url, $title, $options);
     }
 
     /**
