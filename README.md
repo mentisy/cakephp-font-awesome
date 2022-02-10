@@ -37,6 +37,8 @@ echo $this->FontAwe->solid('receipt'); // <i class="fas fa-receipt"></i>
 echo $this->FontAwe->regular('receipt', 'Title'); // <i class="far fa-receipt"></i> Title
 echo $this->FontAwe->light('receipt'); // <i class="fal fa-receipt"></i>
 echo $this->FontAwe->duo('receipt'); // <i class="fad fa-receipt"></i>
+echo $this->FontAwe->brand('github'); // <i class="fab fa-github"></i>
+echo $this->FontAwe->thin('receipt'); // <i class="fat fa-receipt"></i>
 
 ```
 
@@ -46,11 +48,15 @@ echo $this->FontAwe->icon('fas', 'receipt'); // <i class="fas fa-receipt"></i>
 echo $this->FontAwe->icon('far', 'receipt', 'Title'); // <i class="far fa-receipt"></i> Title
 echo $this->FontAwe->icon('fal', 'receipt'); // <i class="fal fa-receipt"></i>
 echo $this->FontAwe->icon('fad', 'receipt'); // <i class="fad fa-receipt"></i>
+echo $this->FontAwe->icon('fab', 'github'); // <i class="fab fa-github"></i>
+echo $this->FontAwe->icon('fat', 'receipt'); // <i class="fat fa-receipt"></i>
 
 echo $this->FontAwe->icon(FontAweHelper::SOLID, 'receipt'); // <i class="fas fa-receipt"></i>
 echo $this->FontAwe->icon(FontAweHelper::REGULAR, 'receipt', 'Title'); // <i class="far fa-receipt"></i> Title
 echo $this->FontAwe->icon(FontAweHelper::LIGHT, 'receipt'); // <i class="fal fa-receipt"></i>
 echo $this->FontAwe->icon(FontAweHelper::DUO, 'receipt'); // <i class="fad fa-receipt"></i>
+echo $this->FontAwe->icon(FontAweHelper::BRAND, 'github'); // <i class="fab fa-github"></i>
+echo $this->FontAwe->icon(FontAweHelper::THIN, 'receipt'); // <i class="fat fa-receipt"></i>
 
 ```
 
