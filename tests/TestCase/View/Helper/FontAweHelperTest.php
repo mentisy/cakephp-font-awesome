@@ -165,6 +165,34 @@ class FontAweHelperTest extends TestCase
     }
 
     /**
+     * Test brandLink method
+     *
+     * @return void
+     * @uses \Avolle\FontAwesome\View\Helper\FontAweHelper::brandLink()
+     * @noinspection HtmlUnknownTarget
+     */
+    public function testBrandLink(): void
+    {
+        $expected = '<a href="/link"><i class="fab fa-github"></i> Some Title</a>';
+        $actual = $this->FontAwe->brandLink('github', '/link', 'Some Title');
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * Test thinLink method
+     *
+     * @return void
+     * @uses \Avolle\FontAwesome\View\Helper\FontAweHelper::thinLink()
+     * @noinspection HtmlUnknownTarget
+     */
+    public function testThinLink(): void
+    {
+        $expected = '<a href="/link"><i class="fat fa-receipt"></i> Some Title</a>';
+        $actual = $this->FontAwe->thinLink('receipt', '/link', 'Some Title');
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
      * Test link method
      * Empty title
      *
