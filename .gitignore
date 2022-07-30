@@ -16,6 +16,7 @@ Thumbs.db
 
 # Tool specific files #
 #######################
+composer.lock
 # PHPUnit
 .phpunit.result.cache
 # vim
