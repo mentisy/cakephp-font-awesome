@@ -8,7 +8,7 @@ Works with:
 Type | Version
 ---- | ----
 CakePHP | ^4.2
-PHP | ^7.4 | ^8.0
+PHP | ^7.4 \| ^8.0
 
 Supports these Fonts:
 * Solid
