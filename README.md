@@ -7,8 +7,17 @@ NB! FontAwesome scripts not included in plugin. You can use FontAwesome kits wit
 Works with:
 Type | Version
 ---- | ----
-CakePHP | 4.2
-PHP | 7.4
+CakePHP | ^4.2
+PHP | ^7.4 | ^8.0
+
+Supports these Fonts:
+* Solid
+* Regular
+* Light
+* Thin
+* Duo
+* Brand
+* Sharp * through passing fa-sharp to class option
 
 ## Installation
 `composer require avolle/cakephp-font-awesome`
@@ -70,6 +79,14 @@ echo $this->FontAwe->regularLink('receipt', ['controller' => 'Icons', 'action' =
 echo $this->FontAwe->lightLink('receipt', '/some-url/', 'Icons'); // <a href="/some-url"><i class="fal fa-receipt"></i> Icons</a>
 // Add a class to the icon (not anchor element)
 echo $this->FontAwe->duoLink('receipt', '/some-url/', 'Icons', ['icon' => ['class' => 'text-success']]); // <a href="/some-url"><i class="fad fa-receipt text-success"></i> Icons</a>
+```
+
+Using the sharp styling
+```php
+// Icon
+echo $this->FontAwe->solid('receipt', null, ['class' => 'fa-sharp']); // <i class="fas fa-receipt fa-sharp"></i>
+// Link
+echo $this->FontAwe->solidLink('receipt', '/some-url/', null, ['icon' => ['class' => 'fa-sharp']]); // <a href="/some-url"><i class="fas fa-receipt fa-sharp"></i></a>
 ```
 
 Load a FontAwesome kit script

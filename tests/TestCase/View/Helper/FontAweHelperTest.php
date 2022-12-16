@@ -109,6 +109,32 @@ class FontAweHelperTest extends TestCase
     }
 
     /**
+     * Test brand method
+     *
+     * @return void
+     * @uses \Avolle\FontAwesome\View\Helper\FontAweHelper::brand()
+     */
+    public function testBrand(): void
+    {
+        $expected = '<i class="fab fa-github"></i>';
+        $actual = $this->FontAwe->brand('github');
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * Test thin method
+     *
+     * @return void
+     * @uses \Avolle\FontAwesome\View\Helper\FontAweHelper::thin()
+     */
+    public function testThin(): void
+    {
+        $expected = '<i class="fat fa-receipt"></i>';
+        $actual = $this->FontAwe->thin('receipt');
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
      * Test solidLink method
      *
      * @return void
