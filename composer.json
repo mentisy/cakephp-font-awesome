@@ -32,13 +32,19 @@
     "autoload": {
         "psr-4": {
             "Avolle\\FontAwesome\\": "src/"
-        }
+        },
+        "files": [
+            "vendor/cakephp/cakephp/src/Core/functions_global.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Avolle\\FontAwesome\\Test\\": "tests/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
-        }
+        },
+        "files": [
+            "vendor/cakephp/cakephp/src/Core/functions_global.php"
+        ]
     },
     "scripts": {
         "check": [
