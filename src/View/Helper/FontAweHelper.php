@@ -52,14 +52,14 @@ class FontAweHelper extends Helper
      *
      * @var array<string, mixed>
      */
-    protected $_defaultConfig = [];
+    protected array $_defaultConfig = [];
 
     /**
      * List of helpers used by this helper
      *
      * @var array
      */
-    protected $helpers = ['Html'];
+    protected array $helpers = ['Html'];
 
     /**
      * Template for FontAwesome icon class attribute
@@ -85,12 +85,12 @@ class FontAweHelper extends Helper
      * Create a link with a FontAwesome Solid icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Solid icon and title
      */
-    public function solidLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function solidLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::SOLID, $icon, $url, $title, $options);
     }
@@ -112,12 +112,12 @@ class FontAweHelper extends Helper
      * Create a link with a FontAwesome Regular icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Regular icon and title
      */
-    public function regularLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function regularLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::REGULAR, $icon, $url, $title, $options);
     }
@@ -139,12 +139,12 @@ class FontAweHelper extends Helper
      * Create a link with a FontAwesome Light icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Light icon and title
      */
-    public function lightLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function lightLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::LIGHT, $icon, $url, $title, $options);
     }
@@ -166,12 +166,12 @@ class FontAweHelper extends Helper
      * Create a link with a Duotone icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Duotone icon and title
      */
-    public function duoLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function duoLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::DUO, $icon, $url, $title, $options);
     }
@@ -193,12 +193,12 @@ class FontAweHelper extends Helper
      * Create a link with a Brand icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Brand icon and title
      */
-    public function brandLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function brandLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::BRAND, $icon, $url, $title, $options);
     }
@@ -220,12 +220,12 @@ class FontAweHelper extends Helper
      * Create a link with a Thin icon
      *
      * @param string $icon FontAwesome icon
-     * @param string|array $url Html url as string or array
+     * @param array|string $url Html url as string or array
      * @param string|null $title Anchor text included with icon
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome Thin icon and title
      */
-    public function thinLink(string $icon, $url, ?string $title = '', array $options = []): string
+    public function thinLink(string $icon, array|string $url, ?string $title = '', array $options = []): string
     {
         return $this->link(self::THIN, $icon, $url, $title, $options);
     }
@@ -263,13 +263,18 @@ class FontAweHelper extends Helper
      *
      * @param string $type FontAwesome icon type (solid, regular, light, duo)
      * @param string $icon FontAwesome icon
-     * @param string|array $url Anchor text
+     * @param array|string $url Anchor text
      * @param string|null $title Html url as string or array
      * @param array $options Attributes to pass to anchor element (pass icon attributes through $options['icon'])
      * @return string Finished anchor element with FontAwesome icon and title
      */
-    public function link(string $type, string $icon, $url, ?string $title = '', array $options = []): string
-    {
+    public function link(
+        string $type,
+        string $icon,
+        array|string $url,
+        ?string $title = '',
+        array $options = [],
+    ): string {
         $options += ['escape' => false];
         $title = $this->icon($type, $icon, $title, $options['icon'] ?? []);
         unset($options['icon']);

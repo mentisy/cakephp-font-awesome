@@ -4,13 +4,13 @@ Create FontAwesome icons with a CakePHP helper
 
 NB! FontAwesome scripts not included in plugin. You can use FontAwesome kits without downloading assets. See further down.
 
-Works with:
-Type | Version
----- | ----
-CakePHP | ^4.2
-PHP | ^7.4 \| ^8.0
+## Version map:
+| Plugin | Branch | Cake | PHP |
+|--------| ------ | --- | --- |
+| 2.x    | main | 5.x | ^8.1 |
+| 1.x    | 1.x | 4.x | ^7.4 \| ^8.0 |
 
-Supports these Fonts:
+## Supports these Fonts:
 * Solid
 * Regular
 * Light
