@@ -7,3 +7,5 @@ use Cake\Core\Configure;
 Configure::write('App.namespace', 'App');
 Configure::write('App.encoding', 'UTF-8');
 Configure::write('App.jsBaseUrl', 'js/');
+
+require dirname(__DIR__) . '/vendor/cakephp/cakephp/src/functions.php';
