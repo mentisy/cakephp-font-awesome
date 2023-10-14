@@ -3,3 +3,5 @@ parameters:
     checkMissingIterableValueType: false
     paths:
         - src
+    bootstrapFiles:
+        - vendor/cakephp/cakephp/src/functions.php
